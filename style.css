@@ -1,0 +1,197 @@
+:root {
+  --orange: #e8a24d;
+  --orange-dark: #c97f2e;
+  --cream: #fff6e9;
+  --brown: #4a3524;
+  --card-bg: #ffffff;
+  --shadow: 0 8px 24px rgba(74, 53, 36, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(180deg, var(--cream) 0%, #ffe9c7 100%);
+  color: var(--brown);
+  min-height: 100vh;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  padding: 48px 16px 24px;
+}
+
+.hero-card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 32px 40px 28px;
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+}
+
+.photo-frame {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff3dd, #ffdca0);
+  padding: 12px;
+  box-shadow: inset 0 0 0 4px var(--orange);
+}
+
+.cat-illustration { width: 100%; height: 100%; }
+
+h1 {
+  margin: 8px 0 2px;
+  font-size: 2.4rem;
+  color: var(--orange-dark);
+}
+
+.subtitle {
+  margin: 0 0 16px;
+  color: #8a6a45;
+  font-style: italic;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.badge {
+  background: var(--orange);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 24px 28px;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: var(--orange-dark);
+  border-bottom: 2px dashed #f0d5ac;
+  padding-bottom: 10px;
+}
+
+.biodata-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.biodata-table tr:not(:last-child) th,
+.biodata-table tr:not(:last-child) td {
+  border-bottom: 1px solid #f3e3c8;
+}
+
+.biodata-table th, .biodata-table td {
+  text-align: left;
+  padding: 10px 6px;
+  vertical-align: top;
+}
+
+.biodata-table th {
+  width: 40%;
+  color: #a3773f;
+  font-weight: 600;
+}
+
+.traits {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.trait-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.meter {
+  background: #f3e3c8;
+  border-radius: 999px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--orange), var(--orange-dark));
+  border-radius: 999px;
+  transition: width 0.6s ease;
+}
+
+.like-list, .dislike-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+}
+
+.like-list li, .dislike-list li {
+  background: #fff6e9;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+.quote-card { text-align: center; }
+
+#quote {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: #7a5a34;
+  min-height: 48px;
+}
+
+#quote-btn {
+  background: var(--orange-dark);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+#quote-btn:hover {
+  background: var(--orange);
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #a3773f;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .hero-card { padding: 24px 20px; }
+  .like-list, .dislike-list { grid-template-columns: 1fr; }
+}
